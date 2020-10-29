@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>DATABASE</ID>
+  <OriginalElement>fa992b01-0311-4591-8f90-f00f9abbdef4.SCHEMA:cladr</OriginalElement>
+  <nodes>
+    <node x="94.5" y="374.0">fa992b01-0311-4591-8f90-f00f9abbdef4.TABLE:cladr.locality</node>
+    <node x="-122.0" y="346.0">fa992b01-0311-4591-8f90-f00f9abbdef4.TABLE:cladr.locality_type</node>
+    <node x="287.5" y="39.0">fa992b01-0311-4591-8f90-f00f9abbdef4.TABLE:cladr.country</node>
+    <node x="111.0" y="183.0">fa992b01-0311-4591-8f90-f00f9abbdef4.TABLE:cladr.region</node>
+    <node x="325.83333333333337" y="181.0">fa992b01-0311-4591-8f90-f00f9abbdef4.TABLE:cladr.area</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="fa992b01-0311-4591-8f90-f00f9abbdef4.TABLE:cladr.locality" target="fa992b01-0311-4591-8f90-f00f9abbdef4.TABLE:cladr.area">
+      <point x="50.66666666666666" y="-71.0" />
+      <point x="256.16666666666663" y="419.0" />
+      <point x="275.5" y="419.0" />
+      <point x="34.0" y="49.0" />
+    </edge>
+    <edge source="fa992b01-0311-4591-8f90-f00f9abbdef4.TABLE:cladr.area" target="fa992b01-0311-4591-8f90-f00f9abbdef4.TABLE:cladr.country">
+      <point x="0.0" y="-49.0" />
+      <point x="0.0" y="49.0" />
+    </edge>
+    <edge source="fa992b01-0311-4591-8f90-f00f9abbdef4.TABLE:cladr.locality" target="fa992b01-0311-4591-8f90-f00f9abbdef4.TABLE:cladr.region">
+      <point x="0.0" y="-71.0" />
+      <point x="0.0" y="49.0" />
+    </edge>
+    <edge source="fa992b01-0311-4591-8f90-f00f9abbdef4.TABLE:cladr.locality" target="fa992b01-0311-4591-8f90-f00f9abbdef4.TABLE:cladr.locality_type">
+      <point x="-50.66666666666666" y="-71.0" />
+      <point x="154.83333333333331" y="419.0" />
+      <point x="63.0" y="419.0" />
+      <point x="0.0" y="38.0" />
+    </edge>
+    <edge source="fa992b01-0311-4591-8f90-f00f9abbdef4.TABLE:cladr.region" target="fa992b01-0311-4591-8f90-f00f9abbdef4.TABLE:cladr.area">
+      <point x="0.0" y="-49.0" />
+      <point x="-34.0" y="49.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="1.2000000000000002" x="205.2500000000001" y="308.0" />
+  <SelectedNodes>
+    <node>fa992b01-0311-4591-8f90-f00f9abbdef4.TABLE:cladr.area</node>
+  </SelectedNodes>
+  <Categories>
+    <Category>Key columns</Category>
+    <Category>Columns</Category>
+    <Category>Virtual foreign keys</Category>
+  </Categories>
+</Diagram>
+
