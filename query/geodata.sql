@@ -1,10 +1,10 @@
-# 1. Сделать запрос, в котором мы выберем все данные о городе – регион, страна.
+# 1. РЎРґРµР»Р°С‚СЊ Р·Р°РїСЂРѕСЃ, РІ РєРѕС‚РѕСЂРѕРј РјС‹ РІС‹Р±РµСЂРµРј РІСЃРµ РґР°РЅРЅС‹Рµ Рѕ РіРѕСЂРѕРґРµ вЂ“ СЂРµРіРёРѕРЅ, СЃС‚СЂР°РЅР°.
 select ctr.title, reg.title, cit.title
   from geodata._cities cit
 left join geodata._regions reg on cit.region_id = reg.id
 left join geodata._countries ctr on reg.country_id = ctr.id;
 
-# 2. Выбрать все города из Московской области.
+# 2. Р’С‹Р±СЂР°С‚СЊ РІСЃРµ РіРѕСЂРѕРґР° РёР· РњРѕСЃРєРѕРІСЃРєРѕР№ РѕР±Р»Р°СЃС‚Рё.
 select reg.title, cit.title
   from _cities cit
   join _regions reg on cit.region_id = reg.id

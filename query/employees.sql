@@ -1,4 +1,4 @@
-# 1. Выбрать среднюю зарплату по отделам.
+# 1. Р’С‹Р±СЂР°С‚СЊ СЃСЂРµРґРЅСЋСЋ Р·Р°СЂРїР»Р°С‚Сѓ РїРѕ РѕС‚РґРµР»Р°Рј.
 select dep.dept_name, avg(sal.salary)
   from employees.employees emp
   join employees.salaries sal on emp.emp_no = sal.emp_no
@@ -8,7 +8,7 @@ where sal.from_date <= curdate()
   and sal.to_date > curdate()
 group by dep.dept_name;
 
-# 2. Выбрать максимальную зарплату у сотрудника.
+# 2. Р’С‹Р±СЂР°С‚СЊ РјР°РєСЃРёРјР°Р»СЊРЅСѓСЋ Р·Р°СЂРїР»Р°С‚Сѓ Сѓ СЃРѕС‚СЂСѓРґРЅРёРєР°.
 select emp.emp_no, emp.first_name, emp.last_name, dep.dept_name, max(sal.salary)
   from employees.employees emp
   join employees.salaries sal on emp.emp_no = sal.emp_no
@@ -16,7 +16,7 @@ select emp.emp_no, emp.first_name, emp.last_name, dep.dept_name, max(sal.salary)
   join employees.departments dep on dep.dept_no = de.dept_no
 group by emp.emp_no;
 
-# 3. Удалить одного сотрудника, у которого максимальная зарплата.
+# 3. РЈРґР°Р»РёС‚СЊ РѕРґРЅРѕРіРѕ СЃРѕС‚СЂСѓРґРЅРёРєР°, Сѓ РєРѕС‚РѕСЂРѕРіРѕ РјР°РєСЃРёРјР°Р»СЊРЅР°СЏ Р·Р°СЂРїР»Р°С‚Р°.
 delete from employees.employees where emp_no = (
   select s.emp_no
     from employees.salaries s
@@ -25,7 +25,7 @@ delete from employees.employees where emp_no = (
   limit 1
  );
 
-# 4. Посчитать количество сотрудников во всех отделах.
+# 4. РџРѕСЃС‡РёС‚Р°С‚СЊ РєРѕР»РёС‡РµСЃС‚РІРѕ СЃРѕС‚СЂСѓРґРЅРёРєРѕРІ РІРѕ РІСЃРµС… РѕС‚РґРµР»Р°С….
 select de.dept_no, dep.dept_name, count(*)
   from employees.employees emp
   join employees.dept_emp de on de.emp_no = emp.emp_no
@@ -34,7 +34,7 @@ where de.from_date <= curdate()
   and de.to_date > curdate()
 group by dep.dept_no;
 
-# 5. Найти количество сотрудников в отделах и посмотреть, сколько всего денег получает отдел.
+# 5. РќР°Р№С‚Рё РєРѕР»РёС‡РµСЃС‚РІРѕ СЃРѕС‚СЂСѓРґРЅРёРєРѕРІ РІ РѕС‚РґРµР»Р°С… Рё РїРѕСЃРјРѕС‚СЂРµС‚СЊ, СЃРєРѕР»СЊРєРѕ РІСЃРµРіРѕ РґРµРЅРµРі РїРѕР»СѓС‡Р°РµС‚ РѕС‚РґРµР».
 select de.dept_no, dep.dept_name, count(*), sum(sal.salary)
   from employees.employees emp
   join employees.salaries sal on emp.emp_no = sal.emp_no
